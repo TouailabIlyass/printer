@@ -18,7 +18,7 @@ class Checkout extends Migration
             $table->foreign('command_id')->references('id')->on('commands');
             $table->unsignedBigInteger('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
-            $table->int('quantite');
+            $table->integer('quantite');
             $table->string('total',10);
             $table->timestamps();
         });

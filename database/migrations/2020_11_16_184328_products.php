@@ -18,7 +18,7 @@ class Products extends Migration
             $table->string('intitule',100);
             $table->longText('description');
             $table->unsignedBigInteger('categorie_id')->unsigned();
-            $table->foreign('categorie-id')->references('id')->on('categories');
+            $table->foreign('categorie_id')->references('id')->on('categories');
             $table->float('prix');
             $table->char('size',10);
             $table->string('color',20);
