@@ -14,7 +14,7 @@ class Command extends Migration
     public function up()
     {
         Schema::create('commands', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->unsigned();
+            $table->bigIncrements('id');
             $table->string('email',60);
             $table->string('phone',20);
             $table->string('firstname',30);

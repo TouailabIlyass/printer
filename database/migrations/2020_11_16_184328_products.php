@@ -14,10 +14,10 @@ class Products extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->unsigned();
+            $table->bigIncrements('id');
             $table->string('intitule',100);
             $table->longText('description');
-            $table->unsignedBigInteger('categorie_id')->unsigned();
+            $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories');
             $table->float('prix');
             $table->char('size',10);

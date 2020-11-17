@@ -14,9 +14,10 @@ class Checkout extends Migration
     public function up()
     {
         Schema::create('checkouts', function (Blueprint $table) {
-            $table->unsignedBigInteger('command_id')->unsigned();
+            $table->unsignedBigInteger('command_id');
             $table->foreign('command_id')->references('id')->on('commands');
-            $table->unsignedBigInteger('product_id')->unsigned();
+            $table->unsignedBigInteger('product_id');
+            $table->primary(['command_id', 'product_id']);
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('quantite');
             $table->string('total',10);

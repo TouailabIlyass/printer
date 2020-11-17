@@ -5,11 +5,13 @@
 use Illuminate\Database\Eloquent\Model;
 
 
-class Categorie extends Model {
+class Checkout extends Model {
 	
-	public $timestamps = false;
+    
     protected $fillable = [
-	'id',
-	'categorie',
+	'command_id',
+	'product_id',
+	'quantite',
+	'total',
 	];
 }

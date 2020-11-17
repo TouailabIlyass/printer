@@ -14,7 +14,7 @@ class Categories extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->unsigned();
+            $table->bigIncrements('id');
             $table->string('categorie');
         });
     }
