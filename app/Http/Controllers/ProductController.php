@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Product;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -56,7 +56,6 @@ class ProductController extends Controller
     public function validateData()
     {
         return request()->validate([
-			'id' => 'required|',
 
 			'intitule' => 'required|max:100|',
 

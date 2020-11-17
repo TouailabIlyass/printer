@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Categorie;
+use \App\Models\Categorie;
 
 class CategorieController extends Controller
 {
@@ -56,8 +56,6 @@ class CategorieController extends Controller
     public function validateData()
     {
         return request()->validate([
-			'id' => 'required|',
-
 			'categorie' => 'required|max:255|',
 		]);
  }

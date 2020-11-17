@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,70 +26,55 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //-------------------categories Routes---------------
-Route::get('/categories', 'CategorieController@index');
-Route::get('/categories/create', 'CategorieController@create');
-Route::post('/categories', 'CategorieController@store');
-Route::get('/categories/{categorie}', 'CategorieController@show');
-Route::get('/categories/{categorie}/edit', 'CategorieController@edit');
-Route::patch('/categories/{categorie}', 'CategorieController@update');
-Route::delete('/categories/{categorie}', 'CategorieController@destroy');
-	//----------------Rest for categories Table-----------------------
-Route::get('/api/categories/limit/{limit?}', 'CategorieController@restIndex');
-Route::get('/api/categories/{categorie}', 'CategorieController@restShow');
-Route::post('/api/categories', 'CategorieController@restStore');
-Route::patch('/api/categories/{categorie}', 'CategorieController@restUpdate');
-Route::delete('/api/categories/{categorie}', 'CategorieController@restDestroy');
+Route::get('/categories', 'App\Http\Controllers\CategorieController@index');
+Route::get('/categories/create', 'App\Http\Controllers\CategorieController@create');
+Route::post('/categories', 'App\Http\Controllers\CategorieController@store');
+Route::get('/categories/{categorie}', 'App\Http\Controllers\CategorieController@show');
+Route::get('/categories/{categorie}/edit', 'App\Http\Controllers\CategorieController@edit');
+Route::patch('/categories/{categorie}', 'App\Http\Controllers\CategorieController@update');
+Route::delete('/categories/{categorie}', 'App\Http\Controllers\CategorieController@destroy');
 //-------------------End categories Routes------------
 
 
 //-------------------checkouts Routes---------------
-Route::get('/checkouts', 'CheckoutController@index');
-Route::get('/checkouts/create', 'CheckoutController@create');
-Route::post('/checkouts', 'CheckoutController@store');
-Route::get('/checkouts/{checkout}', 'CheckoutController@show');
-Route::get('/checkouts/{checkout}/edit', 'CheckoutController@edit');
-Route::patch('/checkouts/{checkout}', 'CheckoutController@update');
-Route::delete('/checkouts/{checkout}', 'CheckoutController@destroy');
-	//----------------Rest for checkouts Table-----------------------
-Route::get('/api/checkouts/limit/{limit?}', 'CheckoutController@restIndex');
-Route::get('/api/checkouts/{checkout}', 'CheckoutController@restShow');
-Route::post('/api/checkouts', 'CheckoutController@restStore');
-Route::patch('/api/checkouts/{checkout}', 'CheckoutController@restUpdate');
-Route::delete('/api/checkouts/{checkout}', 'CheckoutController@restDestroy');
+Route::get('/checkouts', 'App\Http\Controllers\CheckoutController@index');
+Route::get('/checkouts/create', 'App\Http\Controllers\CheckoutController@create');
+Route::post('/checkouts', 'App\Http\Controllers\CheckoutController@store');
+Route::get('/checkouts/{checkout}', 'App\Http\Controllers\CheckoutController@show');
+Route::get('/checkouts/{checkout}/edit', 'App\Http\Controllers\CheckoutController@edit');
+Route::patch('/checkouts/{checkout}', 'App\Http\Controllers\CheckoutController@update');
+Route::delete('/checkouts/{checkout}', 'App\Http\Controllers\CheckoutController@destroy');
 //-------------------End checkouts Routes------------
 
 
 //-------------------commands Routes---------------
-Route::get('/commands', 'CommandController@index');
-Route::get('/commands/create', 'CommandController@create');
-Route::post('/commands', 'CommandController@store');
-Route::get('/commands/{command}', 'CommandController@show');
-Route::get('/commands/{command}/edit', 'CommandController@edit');
-Route::patch('/commands/{command}', 'CommandController@update');
-Route::delete('/commands/{command}', 'CommandController@destroy');
-	//----------------Rest for commands Table-----------------------
-Route::get('/api/commands/limit/{limit?}', 'CommandController@restIndex');
-Route::get('/api/commands/{command}', 'CommandController@restShow');
-Route::post('/api/commands', 'CommandController@restStore');
-Route::patch('/api/commands/{command}', 'CommandController@restUpdate');
-Route::delete('/api/commands/{command}', 'CommandController@restDestroy');
+Route::get('/commands', 'App\Http\Controllers\CommandController@index');
+Route::get('/commands/create', 'App\Http\Controllers\CommandController@create');
+Route::post('/commands', 'App\Http\Controllers\CommandController@store');
+Route::get('/commands/{command}', 'App\Http\Controllers\CommandController@show');
+Route::get('/commands/{command}/edit', 'App\Http\Controllers\CommandController@edit');
+Route::patch('/commands/{command}', 'App\Http\Controllers\CommandController@update');
+Route::delete('/commands/{command}', 'App\Http\Controllers\CommandController@destroy');
 //-------------------End commands Routes------------
 
 
 //-------------------products Routes---------------
-Route::get('/products', 'ProductController@index');
-Route::get('/products/create', 'ProductController@create');
-Route::post('/products', 'ProductController@store');
-Route::get('/products/{product}', 'ProductController@show');
-Route::get('/products/{product}/edit', 'ProductController@edit');
-Route::patch('/products/{product}', 'ProductController@update');
-Route::delete('/products/{product}', 'ProductController@destroy');
-	//----------------Rest for products Table-----------------------
-Route::get('/api/products/limit/{limit?}', 'ProductController@restIndex');
-Route::get('/api/products/{product}', 'ProductController@restShow');
-Route::post('/api/products', 'ProductController@restStore');
-Route::patch('/api/products/{product}', 'ProductController@restUpdate');
-Route::delete('/api/products/{product}', 'ProductController@restDestroy');
+Route::get('/products', [App\Http\Controllers\ProductController::class,'index']);
+Route::get('/products/create', 'App\Http\Controllers\ProductController@create');
+Route::post('/products', 'App\Http\Controllers\ProductController@store');
+Route::get('/products/{product}', 'App\Http\Controllers\ProductController@show');
+Route::get('/products/{product}/edit', 'App\Http\Controllers\ProductController@edit');
+Route::patch('/products/{product}', 'App\Http\Controllers\ProductController@update');
+Route::delete('/products/{product}', 'App\Http\Controllers\ProductController@destroy');
 //-------------------End products Routes------------
 
 
+//-------------------products Routes---------------
+Route::get('/admin', [App\Http\Controllers\AdminController::class,'index']);
+Route::get('/products/create', 'App\Http\Controllers\ProductController@create');
+Route::post('/products', 'App\Http\Controllers\ProductController@store');
+Route::get('/products/{product}', 'App\Http\Controllers\ProductController@show');
+Route::get('/products/{product}/edit', 'App\Http\Controllers\ProductController@edit');
+Route::patch('/products/{product}', 'App\Http\Controllers\ProductController@update');
+Route::delete('/products/{product}', 'App\Http\Controllers\ProductController@destroy');
+//-------------------End products Routes------------
