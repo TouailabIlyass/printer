@@ -7,6 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## this a small website that can sell a T-shirt with a custom logo.
+#langing page
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/landingpage1.png)
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/landingpage2.png)
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/landingpage3.png)
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/landingpage4.png)
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/landingpage5.png)
+#admin side
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/dashbadmin_login.PNG)
+
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/dashboard.PNG)
+
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/dashbadmin_login.PNG)
+
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/new-orders.PNG)
+![Screenshot 2021-02-09 at 5 08 54 PM](https://github.com/TouailabIlyass/printer/blob/master/view-orders.PNG)
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
